@@ -38,11 +38,11 @@ let users = [
       "address": {
          "street": "Victor Plains",
          "suite": "Suite 879",
-         "city": "Wisokyburgh",
-         "zipcode": "90566-7771",
+         "city": "Roscoeville",
+         "zipcode": "33263",
          "geo": {
-            "lat": "-43.9509",
-            "lng": "-34.4618"
+            "lat": "-31.8129",
+            "lng": "62.5342"
          }
       },
       "phone": "010-692-6593 x09125",
@@ -84,11 +84,11 @@ let users = [
       "address": {
          "street": "Hoeger Mall",
          "suite": "Apt. 692",
-         "city": "South Elvis",
-         "zipcode": "53919-4257",
+         "city": "Gwenborough",
+         "zipcode": "92998-3874",
          "geo": {
-            "lat": "29.4572",
-            "lng": "-164.2990"
+            "lat": "-37.3159",
+            "lng": "81.1496"
          }
       },
       "phone": "493-170-9623 x156",
@@ -107,7 +107,7 @@ let users = [
       "address": {
          "street": "Skiles Walks",
          "suite": "Suite 351",
-         "city": "Roscoeview",
+         "city": "Roscoeville",
          "zipcode": "33263",
          "geo": {
             "lat": "-31.8129",
@@ -153,11 +153,11 @@ let users = [
       "address": {
          "street": "Rex Trail",
          "suite": "Suite 280",
-         "city": "Howemouth",
-         "zipcode": "58804-1099",
+         "city": "Gwenborough",
+         "zipcode": "92998-3874",
          "geo": {
-            "lat": "24.8918",
-            "lng": "21.8984"
+            "lat": "-37.3159",
+            "lng": "81.1496"
          }
       },
       "phone": "210.067.6132",
@@ -176,11 +176,11 @@ let users = [
       "address": {
          "street": "Ellsworth Summit",
          "suite": "Suite 729",
-         "city": "Aliyaview",
-         "zipcode": "45169",
+         "city": "Roscoeville",
+         "zipcode": "33263",
          "geo": {
-            "lat": "-14.3990",
-            "lng": "-120.7677"
+            "lat": "-31.8129",
+            "lng": "62.5342"
          }
       },
       "phone": "586.493.6943 x140",
@@ -2053,4 +2053,20 @@ let todos = [
 //
 //  START CODE DEMOS HERE
 //
+
+// OLD SCHOOL way of looking for a UNIQUE thing
+for (let i = 0; i < users.length; i++) {
+   if(users[i].name == "Ervin Howell") {
+      console.log(users[i].id + " is Ervin Howell");
+      break; // stop when you find it
+   }
+}
+
+// OLD SCHOOL way of looking for ALL things that match a criteria
+for (let i = 0; i < users.length; i++) {
+   if(users[i].address.city == "Gwenborough") {
+      console.log(users[i].name + " lives in Gwenborough");
+      // no break because there could be more matches
+   }
+}
 
