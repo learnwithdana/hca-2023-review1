@@ -2062,11 +2062,55 @@ for (let i = 0; i < users.length; i++) {
    }
 }
 
+for (let user of users) {
+   if(user.name == "Ervin Howell") {
+      console.log(user.id + " is Ervin Howell");
+      break; // stop when you find it
+   } 
+}
+
 // OLD SCHOOL way of looking for ALL things that match a criteria
 for (let i = 0; i < users.length; i++) {
    if(users[i].address.city == "Gwenborough") {
       console.log(users[i].name + " lives in Gwenborough");
       // no break because there could be more matches
    }
+}
+
+// USE NEWER ES6 methods
+// find - returns the first match of a search
+//    find returns undefined if no match found
+// filter - returns all matches in a search
+//     filter returns an empty array if no matches found
+
+// Get id user of Ervin Howell
+let foundUser = users.find((user) => user.name == "Ervin Howell");
+if (foundUser != undefined) {
+   console.log(
+      foundUser.id + " is Ervin Howell and he lives in " + foundUser.address.city);
+}
+else {
+   console.log("Ervin Howell not found");
+}
+
+// Get the todo whose id is 198
+let foundTodo = todos.find((todo) => todo.id == 198);
+if (foundTodo != undefined) {
+   console.log(
+      foundTodo.id + " " + foundTodo.title);
+}
+else {
+   console.log("Todo # 198 not found");
+}
+
+// Get the todo whose id is 1200098  (no let because variable already created above)
+foundTodo = todos.find((todo) => todo.id == 1200098);
+console.log(foundTodo);
+if (foundTodo != undefined) {
+   console.log(
+      foundTodo.id + " " + foundTodo.title);
+}
+else {
+   console.log("Todo # 1200098 not found");
 }
 
