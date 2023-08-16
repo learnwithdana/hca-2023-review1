@@ -2137,3 +2137,41 @@ if (foundPosts.length != 0) {
 else {
    console.log("No posts for user #2");
 }
+
+// Find all posts for user 2000 (no let for foundPosts because defined above)
+foundPosts = posts.filter((post) => post.userId == 2000);
+if (foundPosts.length != 0) {
+   for (let post of foundPosts) {
+      console.log(`${post.id}  ${post.title} `);
+   }  
+}
+else {
+   console.log("No posts for user #2000");
+}
+
+console.log("--------------------------");
+// CHALLENGE:  Find the Posts for Ervin Howell
+
+// STEP 1 - find Ervin's userId
+
+// Get id user of Ervin Howell (no let on foundUser becaus eit is above)
+foundUser = users.find((user) => user.name == "Ervin Howell");
+if (foundUser != undefined) {
+ 
+   // STEP 2 - find posts for Elvin's userid
+   let searchId = foundUser.id;
+   
+   let foundPosts = posts.filter((post) => post.userId == searchId);
+   if (foundPosts.length != 0) {
+      for (let post of foundPosts) {
+         console.log(`${post.id}  ${post.title} `);
+      }  
+   }
+   else {
+      console.log("No posts for user #" + serachId);
+   }
+
+}
+else {
+   console.log("Ervin Howell not found");
+}
