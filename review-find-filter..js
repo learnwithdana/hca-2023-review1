@@ -2077,6 +2077,8 @@ for (let i = 0; i < users.length; i++) {
    }
 }
 
+console.log("NEW TECNIQUES BELOW");
+
 // USE NEWER ES6 methods
 // find - returns the first match of a search
 //    find returns undefined if no match found
@@ -2114,3 +2116,24 @@ else {
    console.log("Todo # 1200098 not found");
 }
 
+// Find all users that live in Roscoeville
+let foundUsers = users.filter((user) => user.address.city == "Roscoeville");
+if (foundUsers.length != 0) {
+   for (let user of foundUsers) {
+      console.log(`${user.id}  ${user.name}  lives ${user.address.city}`);
+   }  
+}
+else {
+   console.log("Nobody lives in Roscoeville");
+}
+
+// Find all posts for user 2
+let foundPosts = posts.filter((post) => post.userId == 2);
+if (foundPosts.length != 0) {
+   for (let post of foundPosts) {
+      console.log(`${post.id}  ${post.title} `);
+   }  
+}
+else {
+   console.log("No posts for user #2");
+}
