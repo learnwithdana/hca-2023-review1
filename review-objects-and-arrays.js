@@ -7,6 +7,26 @@ let bovines = ["Jersey", "Guernsey", "Longhorn"];
 // Display the 3rd type
 console.log(bovines[2]);
 
+// for (original)
+for (let i = 0; i < bovines.length; i++) {
+   console.log(bovines[i]);
+}
+
+// for of
+for (let eachItem of bovines) {
+   console.log(eachItem)
+}
+
+// for (original) using subscript
+// for (let i = 0; i < bovines.length; i++) {
+//    console.log(`${i} - ${bovines[i]}`);
+// }
+
+// for (original) using subscript
+for (let i = 0; i < bovines.length; i++) {
+   console.log(`${i+1} - ${bovines[i]}`);
+}
+
 
 //////////////////////////////////////////////////////////////////////
 // Demo 2 - 
@@ -21,6 +41,15 @@ let pet = {
 
 // Display his name and age
 console.log(`${pet.name} ${pet.age}`);
+
+// Use loop to display properties
+for (let propertyName in pet) {
+   console.log(propertyName + " " + pet[propertyName]);
+       // normally, we access a property in an object like pet.name or pet.age
+       // but JavaScript lets us use array like notation with the subscript being the
+       // proprty name (ex:  pet["name"] or pet["age"])
+}
+
 
 
 //////////////////////////////////////////////////////////////////////
